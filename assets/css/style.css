@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    height: 100%;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* Inherits the same background */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6); /* Adjust brightness (0 = black, 1 = original) */
+    z-index: -1; /* Ensures it stays behind the content */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+span {
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: clamp(40px, 10vw, 150px);
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+
+    
+    font-size: clamp(24px, 5vw, 64px);
+}
+
+.countdown {
+    display: flex;
+    gap: clamp(10px, 3vw, 15px);
+}
+
+h1 {
+    margin-bottom: clamp(20px, 6vw, 50px);
+    font-size: clamp(40px, 8vw, 76px);
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+}
