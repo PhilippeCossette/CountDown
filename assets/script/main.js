@@ -2,7 +2,7 @@ let countDownInterval;
 
 function main(){
     const dateGab = new Date("2021-01-23T23:59:59");
-    const datePhil = new Date("2025-03-10T23:59:59");
+    const datePhil = new Date("2025-02-12T23:59:59");
     const timeNow = new Date().getTime();
     if(dateGab.getTime() > timeNow){
         countDown(dateGab);
